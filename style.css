@@ -1,0 +1,227 @@
+/* 1. Base Setup & Variables */
+:root {
+    --primary-color: #1a3c34;
+    --accent-color: #c0a16b;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* 2. Header & Navigation */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+nav {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.top-bar { 
+    background: #333; 
+    color: white; 
+    padding: 10px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 14px; 
+}
+
+/* 3. Layout Grid */
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+main {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+aside { 
+    flex: 1; 
+}
+
+/* 4. Card Styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #235247;
+}
+
+/* 5. Dua & Arabic Sections */
+.arabic-text {
+    font-size: 1.8rem; /* Made slightly larger for readability */
+    font-weight: 600;
+    margin: 15px 0;
+    line-height: 2.2;
+    color: var(--primary-color);
+    direction: rtl; 
+    text-align: right;
+    padding: 0 10px;
+}
+
+.dua-display {
+    margin-top: 20px;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.dua-display:hover {
+    transform: scale(1.02);
+}
+
+.dua-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.dua-card:hover .dua-box {
+    background: #fffdf5; /* Subtle gold tint on hover */
+}
+
+/* 6. Sidebar Styling */
+.sidebar-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.sidebar-section h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.sidebar-section ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.sidebar-section li { 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee; 
+}
+
+/* 7. Audio & Media Styling */
+.audio-player-container {
+    background: #f1f3f4;
+    padding: 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+audio {
+    width: 100%;
+    height: 35px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+}
+
+.fa-spin {
+    animation: fa-spin 8s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 8. Footer & Mobile Responsiveness */
+footer { 
+    background: var(--primary-color); 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    margin-top: 40px; 
+}
+
+@media (max-width: 768px) {
+    .layout { flex-direction: column; }
+    header { padding: 60px 20px; }
+    .arabic-text { font-size: 1.4rem; }
+}

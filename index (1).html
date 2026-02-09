@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajj & Umrah Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="top-bar">
+    <span><i class="fas fa-graduation-cap"></i> ا ا إِلَٰهَ إِلَّا ٱللَّٰهُ مُحَمَّدٌ رَسُولُ ٱللَّٰهِ</span>
+    <span>2026 Edition</span>
+</div>
+
+<header>
+    <h1>Hajj & Umrah Planner</h1>
+    <p>Your complete guide for a blessed journey</p>
+</header>
+
+<nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="hajj.html"><i class="fas fa-kaaba"></i> Hajj</a>
+    <a href="umrah.html"><i class="fas fa-mosque"></i> Umrah</a>
+    <a href="preparation.html"><i class="fas fa-clipboard-list"></i> Preparation</a>
+    <a href="places.html"><i class="fas fa-camera"></i> Places to Visit</a>
+</nav>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search rituals, places, or tips..." onkeyup="searchContent()">
+    </div>
+</div>
+
+<div class="layout">
+    <main id="mainContent">
+        <p id="noResults" style="display:none; text-align:center; grid-column: 1/-1;">No matching guides found.</p>
+
+        <div class="card" data-title="umrah guide ihram tawaf sai">
+            <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=80" alt="Masjid Nabawi" class="card-img">
+            <div class="card-content">
+                <h3>Umrah Guide</h3>
+                <p>Learn Umrah rituals including Ihram, Tawaf, Sa’i, and Halq/Qasar explained clearly.</p>
+                <a class="btn" href="umrah.html">Read More</a>
+            </div>
+        </div>
+
+        <div class="card" data-title="hajj guide mina arafat muzdalifah">
+            <img src="https://images.unsplash.com/photo-1565552645632-d7c5f76a16cc?auto=format&fit=crop&w=600&q=80" alt="Kaaba Makkah" class="card-img">
+            <div class="card-content">
+                <h3>Hajj Guide</h3>
+                <p>Understand the five days of Hajj: Mina, Arafat, Muzdalifah, and Jamarat.</p>
+                <a class="btn" href="hajj.html">Read More</a>
+            </div>
+        </div>
+
+        <div class="card" data-title="preparation spiritual travel packing">
+            <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=600&q=80" alt="Preparation" class="card-img">
+            <div class="card-content">
+                <h3>Preparation</h3>
+                <p>Learn spiritual, physical, and travel preparation before starting your journey.</p>
+                <a class="btn" href="preparation.html">Read More</a>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="sidebar-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Ihram Rules</li>
+                <li><i class="fas fa-check-circle"></i> Tawaf Guide</li>
+                <li><i class="fas fa-check-circle"></i> Important Duas</li>
+            </ul>
+        </div>
+        
+        <div class="card dua-card" data-title="important duas prayer supplication">
+    <div class="card-content">
+        <div class="card-icon" style="font-size: 30px; margin-bottom: 10px;">🤲</div>
+        <h3>Important Duas</h3>
+        <p>Essential supplications for your journey, including the Talbiyah and Duas for Tawaf.</p>
+        
+        <div class="dua-box" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; text-align: left; border-left: 4px solid var(--accent-color);">
+            <p style="font-style: italic; font-size: 0.85rem; color: #555; margin-bottom: 5px;">Talbiyah:</p>
+            <p style="font-weight: 600; color: var(--primary-color);">"Labbayk Allahumma Labbayk..."</p>
+        </div>
+        
+        <a class="btn" href="duas.html">View All Duas</a>
+    </div>
+</div>
+    </aside>
+</div>
+
+<footer>
+    <p>© 2026 Hajj & Umrah Companion | Student Project</p>
+</footer>
+
+</body>
+</html>
